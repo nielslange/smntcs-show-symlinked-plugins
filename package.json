@@ -1,0 +1,30 @@
+{
+	"name": "smntcs-show-active-plugins",
+	"description": "This plugin adds a submenu item to the Plugins menu item, that links to all active plugins.",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"Plugin",
+		"SMNTCS Theme List View"
+	],
+	"homepage": "https://github.com/nielslange/smntcs-show-active-plugins#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nielslange/smntcs-show-active-plugins.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nielslange/smntcs-show-active-plugins/issues"
+	},
+	"devDependencies": {
+		"@wordpress/env": "5.15.0",
+		"@wordpress/prettier-config": "2.13.0",
+		"eslint": "^8.37.0",
+		"prettier": "npm:wp-prettier@^2.8.5"
+	},
+	"scripts": {
+		"phpcbf": "composer run phpcbf",
+		"phpcs": "composer run phpcs",
+		"phplint": "composer run phplint",
+		"wp-env": "wp-env"
+	}
+}
