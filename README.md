@@ -16,12 +16,12 @@ This plugin adds a submenu item to the Plugins menu item, that links to all acti
 
 ![smntcs-show-active-plugins](https://user-images.githubusercontent.com/3323310/233825424-f20e04ff-ff66-4675-9f1d-4ae606d69396.png)
 
-## Plugin page
+<!-- ## Plugin page
 
-You can find the plugin on https://wordpress.org/plugins/smntcs-show-active-plugins/.
+You can find the plugin on https://wordpress.org/plugins/smntcs-show-active-plugins/. -->
 
 ## Changelog
 
 ### 1.0 (2023.04.23)
 
-- Initial release
+-   Initial release
