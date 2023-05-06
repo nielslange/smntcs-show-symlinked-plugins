@@ -11,6 +11,10 @@ License URI: 		https://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin adds a submenu item to the Plugins menu item, that links to all active plugins.
 
+== Description ==
+
+This plugin adds a submenu item to the Plugins menu item, that links to all active plugins.
+
 == Installation ==
 
 1. Upload `smntcs-show-active-plugins` to the `/wp-content/plugins/` directory.
