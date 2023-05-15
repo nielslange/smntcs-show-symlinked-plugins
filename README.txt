@@ -26,3 +26,6 @@ Contributions are more than welcome. Simply head over to [Github](https://github
 
 == Changelog ==
 
+= 1.0 (2023.05.15) =
+
+- Initial release
