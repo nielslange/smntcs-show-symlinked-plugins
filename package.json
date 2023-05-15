@@ -1,27 +1,30 @@
 {
-	"name": "smntcs-show-active-plugins",
-	"description": "This plugin adds a submenu item to the Plugins menu item, that links to all active plugins.",
+	"name": "smntcs-show-symlinked-plugins",
+	"description": "Prevent accidentally deleting or updating symlinked plugins.",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
 		"WordPress",
 		"Plugin",
 		"SMNTCS Theme List View"
 	],
-	"homepage": "https://github.com/nielslange/smntcs-show-active-plugins#readme",
+	"homepage": "https://github.com/nielslange/smntcs-show-symlinked-plugins#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/nielslange/smntcs-show-active-plugins.git"
+		"url": "git+https://github.com/nielslange/smntcs-show-symlinked-plugins.git"
 	},
 	"bugs": {
-		"url": "https://github.com/nielslange/smntcs-show-active-plugins/issues"
+		"url": "https://github.com/nielslange/smntcs-show-symlinked-plugins/issues"
 	},
 	"devDependencies": {
 		"@wordpress/env": "5.15.0",
 		"@wordpress/prettier-config": "2.13.0",
 		"eslint": "^8.37.0",
-		"prettier": "npm:wp-prettier@^2.8.5"
+		"prettier": "npm:wp-prettier@^2.8.5",
+		"sass": "^1.62.1"
 	},
 	"scripts": {
+		"build": "sass assets/scss/admin.scss assets/css/admin.css --style=compressed",
+		"build:watch": "npm run build && npm run build -- --watch",
 		"phpcbf": "composer run phpcbf",
 		"phpcs": "composer run phpcs",
 		"phplint": "composer run phplint",

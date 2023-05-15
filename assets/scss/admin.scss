@@ -1,0 +1,27 @@
+.plugins {
+	.active.symlinked th.check-column,
+	.symlinked th.check-column {
+		border-left: 4px solid #dba617;
+	}
+
+	.active.symlinked.update th.check-column,
+	.symlinked.update th.check-column {
+		border-left: 4px solid #d63638;
+	}
+
+	.update.symlinked td,
+	.update.symlinked th,
+	.updated.symlinked td,
+	.updated.symlinked th,
+	tr.active.symlinked + tr.inactive.update.symlinked td,
+	tr.active.symlinked + tr.inactive.update.symlinked th,
+	tr.active.symlinked + tr.inactive.updated.symlinked td,
+	tr.active.symlinked + tr.inactive.updated.symlinked th {
+		box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	.plugin-update-tr.symlinked,
+	.symlinked .delete {
+		display: none;
+	}
+}

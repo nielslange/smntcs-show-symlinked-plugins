@@ -14,5 +14,5 @@ jobs:
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SLUG: smntcs-show-active-plugins
+        SLUG: smntcs-show-symlinked-plugins
         ASSETS_DIR: assets
