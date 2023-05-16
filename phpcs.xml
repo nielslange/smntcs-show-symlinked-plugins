@@ -46,6 +46,13 @@
 		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
 	</rule>
 
+	<!-- Allow PHP class. -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false"/>
+		</properties>
+	</rule>
+
 	<!-- Check valid textdomain. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
