@@ -59,6 +59,9 @@ class SMNTCS_Show_Symlinked_Plugins {
 					// Removes the delete button when plugin is not active.
 					$( '#delete-' + plugin ).remove();
 
+					// Removes the "Enable auto-updates" link.
+					row.find( '.toggle-auto-update' ).remove();
+
 					// Adds the "Symlinked" text to the front of the actions row.
 					row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
 				});
