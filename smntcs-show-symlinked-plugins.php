@@ -19,8 +19,6 @@ class SMNTCS_Show_Symlinked_Plugins {
 	public function __construct() {
 		add_action( 'admin_footer', array( $this, 'add_custom_class_to_plugin_row' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
-		add_action( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'add_plugin_settings_link' ) );
-
 	}
 
 	public function add_custom_class_to_plugin_row() {
@@ -36,14 +34,15 @@ class SMNTCS_Show_Symlinked_Plugins {
 				?>
 				<script type="text/javascript">
 				jQuery(document).ready(function($) {
-					const row = $('tr[data-slug="<?php echo esc_html( $plugin_data['TextDomain'] ); ?>"]');
-					row.addClass('symlinked');
+					const plugin = '<?php echo sanitize_text_field( wp_unslash( $plugin_data['TextDomain'] ) ); ?>';
+					const row    = $( `tr[data-slug="${plugin}"]`);
+					row.addClass( 'symlinked' );
 
-					const activateLink = row.find('.activate');
-					activateLink.each(function() {
-						const text = $(this).html();
-						$(this).html(text.replace(' | ', ''));
-					});
+					// Removes the delete button when plugin is not active.
+					$( '#delete-' + plugin ).remove();
+
+					// Adds the "Symlinked" text to the front of the actions row.
+					row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
 				});
 				</script>
 				<?php
@@ -53,21 +52,6 @@ class SMNTCS_Show_Symlinked_Plugins {
 
 	public function enqueue_admin_styles() {
 		wp_enqueue_style( 'smntcs-admin-style', plugins_url( 'assets/css/admin.css', __FILE__ ) );
-	}
-
-
-	/**
-	 * Add settings link on plugin page
-	 *
-	 * @param array $url The original URL.
-	 * @return array The updated URL.
-	 * @since 1.0.0
-	 */
-	public static function add_plugin_settings_link( $url ) {
-		$settings_link = sprintf( '<span class="symlinked-notice">%s</span>', __( 'Symlinked', 'smntcs-show-symlinked-plugins' ) );
-		array_unshift( $url, $settings_link );
-
-		return $url;
 	}
 }
 

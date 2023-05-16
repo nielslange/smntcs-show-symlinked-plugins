@@ -4,9 +4,8 @@
 		border-left: 4px solid #dba617;
 	}
 
-	.active.symlinked.update th.check-column,
-	.symlinked.update th.check-column {
-		border-left: 4px solid #d63638;
+	.symlinked-text {
+		color: #dba617;
 	}
 
 	.update.symlinked td,
@@ -23,10 +22,5 @@
 	.plugin-update-tr.symlinked,
 	.symlinked .delete {
 		display: none;
-	}
-
-	.symlinked-notice {
-		font-weight: 800;
-		color: #d63638;
 	}
 }
