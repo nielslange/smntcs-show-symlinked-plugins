@@ -4,8 +4,19 @@
 		border-left: 4px solid #dba617;
 	}
 
+	.active.symlinked.update th.check-column,
+	.symlinked.update th.check-column {
+		border-left: 4px solid #b32d2e;
+	}
+
+	.symlinked.update td,
+	.symlinked.update th {
+		background-color: rgb(255, 240, 240);
+	}
+
 	.symlinked-text {
 		color: #dba617;
+		font-weight: 700;
 	}
 
 	.update.symlinked td,
