@@ -50,20 +50,22 @@ class SMNTCS_Show_Symlinked_Plugins {
 				?>
 				<script type="text/javascript">
 				jQuery(document).ready(function($) {
-					const plugin = '<?php echo esc_html( $plugin_data['TextDomain'] ); ?>';
-					const row    = $( `tr[data-slug="${plugin}"]`);
+					const row = $( `tr[data-plugin="<?php echo esc_html( $plugin_file ); ?>"]`);
 
 					// Adds the "symlinked" class to the plugin row.
 					row.addClass( 'symlinked' );
 
+					// Adds the "Symlinked" text to the front of the actions row.
+					row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
+
 					// Removes the delete button when plugin is not active.
-					$( '#delete-' + plugin ).remove();
+					row.find('.delete').remove();
+
+					// Removes the " | " separator behind the "Activate" link when plugin is active.
+					row.find('.activate').html(function(_, html){ return html.replace(' | ', ''); });
 
 					// Removes the "Enable auto-updates" link.
 					row.find( '.toggle-auto-update' ).remove();
-
-					// Adds the "Symlinked" text to the front of the actions row.
-					row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
 				});
 				</script>
 				<?php
