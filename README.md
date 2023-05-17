@@ -8,7 +8,7 @@ This plugins highlights the symlinked plugins on the plugin page and removes the
 
 ## Screenshot
 
-![smntcs test_wp-admin_plugins php](https://github.com/nielslange/smntcs-show-symlinked-plugins/assets/3323310/20449a9f-0415-401f-82db-9aa45e2b9afe)
+<img width="1441" alt="Screen Shot 2023-05-17 at 22 23 56" src="https://github.com/nielslange/smntcs-show-symlinked-plugins/assets/3323310/c5e7fcbe-e7c9-4e2d-a026-abfb9d24a4f4">
 
 - ![#72aee6](https://placehold.co/15x15/72aee6/72aee6.png) `#72aee6`: This plugin is not symlinked, but installed.
 - ![#dba617](https://placehold.co/15x15/dba617/dba617.png) `#dba617`: This plugin is symlinked, and it's the most recent version.
