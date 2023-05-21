@@ -24,16 +24,35 @@ class SMNTCS_Show_Symlinked_Plugins {
 	 *
 	 * @var string
 	 */
-	private $version = '1.0';
+	private $version;
 
 	/**
 	 * SMNTCS_Show_Symlinked_Plugins constructor.
 	 */
 	public function __construct() {
+		$this->version = $this->get_plugin_version();
+
 		add_action( 'admin_footer', array( $this, 'add_custom_class_to_plugin_row' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
 	}
 
+	/**
+	 * Returns the plugin version by parsing the plugin header.
+	 *
+	 * @return string
+	 */
+	private function get_plugin_version() {
+		static $version;
+
+		if ( isset( $version ) ) {
+			return $version;
+		}
+
+		$plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ) );
+		$version     = $plugin_data['Version'];
+
+		return $version;
+	}
 	/**
 	 * Adds a custom class to the plugin row.
 	 */
