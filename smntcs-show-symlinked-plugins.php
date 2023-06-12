@@ -3,7 +3,7 @@
  * Plugin Name: SMNTCS Show Symlinked Plugins
  * Plugin URI: http://github.com/nielslange/smntcs-show-symlinked-plugins
  * Description: Prevent accidentally deleting or updating symlinked plugins.
- * Version: 1.0
+ * Version: 1.1
  * Author: Niels Lange
  * Author URI: http://nielslange.de
  * License: GPL2
