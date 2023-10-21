@@ -39,6 +39,10 @@ The plugin comes with an admin CSS file that you can customize to adjust how sym
 
 ## Changelog
 
+### 1.2 (2023.10.21)
+
+- Test up to WP 6.4
+
 ### 1.1 (2023.06.12)
 
 -   Add screenshot

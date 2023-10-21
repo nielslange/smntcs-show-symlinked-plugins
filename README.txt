@@ -2,10 +2,10 @@
 
 Contributors: 		nielslange
 Tags: 				Plugins
-Stable tag: 		1.1
-Tested up to: 		6.2
-Requires PHP: 		7.4
+Stable tag: 		1.2
+Tested up to: 		6.4
 Requires at least: 	5.2
+Requires PHP: 		7.4
 License: 			GPL v2 or later
 License URI: 		https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,10 @@ The plugin comes with an admin CSS file that you can customize to adjust how sym
 Contributions are more than welcome. Simply head over to [Github](https://github.com/nielslange/smntcs-show-symlinked-plugins) and open an issue or a pull request.
 
 == Changelog ==
+
+= 1.2 (2023.10.21) =
+
+- Test up to WP 6.4
 
 = 1.1 (2023.06.12) =
 

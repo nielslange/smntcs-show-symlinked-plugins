@@ -1,14 +1,16 @@
 <?php
 /**
- * Plugin Name: SMNTCS Show Symlinked Plugins
- * Plugin URI: http://github.com/nielslange/smntcs-show-symlinked-plugins
- * Description: Prevent accidentally deleting or updating symlinked plugins.
- * Version: 1.1
- * Author: Niels Lange
- * Author URI: http://nielslange.de
- * License: GPL2
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: smntcs-show-symlinked-plugins
+ * Plugin Name:         SMNTCS Show Symlinked Plugins
+ * Plugin URI:          http://github.com/nielslange/smntcs-show-symlinked-plugins
+ * Description:         Prevent accidentally deleting or updating symlinked plugins.
+ * Author:              Niels Lange
+ * Author URI:          http://nielslange.de
+ * Text Domain:         smntcs-show-symlinked-plugins
+ * Version:             1.2
+ * Requires at least:   5.2
+ * Requires PHP:        5.6
+ * License:             GPL2
+ * License URI:         https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package smntcs-show-symlinked-plugins
  */
