@@ -2,7 +2,7 @@
 
 Contributors: 		nielslange
 Tags: 				Plugins
-Stable tag: 		1.2
+Stable tag: 		1.3
 Tested up to: 		6.4
 Requires at least: 	5.2
 Requires PHP: 		7.4
@@ -43,6 +43,10 @@ The plugin comes with an admin CSS file that you can customize to adjust how sym
 Contributions are more than welcome. Simply head over to [Github](https://github.com/nielslange/smntcs-show-symlinked-plugins) and open an issue or a pull request.
 
 == Changelog ==
+
+= 1.3 (2023.10.24) =
+
+- Encapsulated JS within anonymous function
 
 = 1.2 (2023.10.21) =
 

@@ -6,7 +6,7 @@
  * Author:              Niels Lange
  * Author URI:          http://nielslange.de
  * Text Domain:         smntcs-show-symlinked-plugins
- * Version:             1.2
+ * Version:             1.3
  * Requires at least:   5.2
  * Requires PHP:        5.6
  * License:             GPL2
@@ -67,27 +67,29 @@ class SMNTCS_Show_Symlinked_Plugins {
 		$plugins = get_plugins();
 		foreach ( $plugins as $plugin_file => $plugin_data ) {
 			$real_path = realpath( WP_PLUGIN_DIR . '/' . $plugin_file );
-			if ( $real_path && dirname( $real_path ) !== WP_PLUGIN_DIR . '/' . dirname( $plugin_file ) ) {
+			if ( $real_path && dirname( $real_path ) !== trailingslashit( WP_PLUGIN_DIR ) . dirname( $plugin_file ) ) {
 				?>
 				<script type="text/javascript">
-				jQuery(document).ready(function($) {
-					const row = $( `tr[data-plugin="<?php echo esc_html( $plugin_file ); ?>"]`);
+					(function($) {
+						$(document).ready(function() {
+							const row = $( `tr[data-plugin="<?php echo esc_html( $plugin_file ); ?>"]`);
 
-					// Adds the "symlinked" class to the plugin row.
-					row.addClass( 'symlinked' );
+							// Adds the "symlinked" class to the plugin row.
+							row.addClass( 'symlinked' );
 
-					// Adds the "Symlinked" text to the front of the actions row.
-					row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
+							// Adds the "Symlinked" text to the front of the actions row.
+							row.find( '.row-actions' ).prepend( '<span class="symlinked-text">Symlinked</span> | ' );
 
-					// Removes the delete button when plugin is not active.
-					row.find('.delete').remove();
+							// Removes the delete button when plugin is not active.
+							row.find('.delete').remove();
 
-					// Removes the " | " separator behind the "Activate" link when plugin is active.
-					row.find('.activate').html(function(_, html){ return html.replace(' | ', ''); });
+							// Removes the " | " separator behind the "Activate" link when plugin is active.
+							row.find('.activate').html(function(_, html){ return html.replace(' | ', ''); });
 
-					// Removes the "Enable auto-updates" link.
-					row.find( '.toggle-auto-update' ).remove();
-				});
+							// Removes the "Enable auto-updates" link.
+							row.find( '.toggle-auto-update' ).remove();
+						});
+					})(jQuery);
 				</script>
 				<?php
 			}
