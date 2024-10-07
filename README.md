@@ -37,6 +37,10 @@ The plugin comes with an admin CSS file that you can customize to adjust how sym
 1. Upload `smntcs-show-symlinked-plugins` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
 
+## Plugin page
+
+You can find the plugin on https://wordpress.org/plugins/smntcs-show-symlinked-plugins/.
+
 ## Changelog
 
 ### 1.3 (2023.10.24)
