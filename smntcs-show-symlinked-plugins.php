@@ -6,7 +6,7 @@
  * Author:              Niels Lange
  * Author URI:          http://nielslange.de
  * Text Domain:         smntcs-show-symlinked-plugins
- * Version:             1.3
+ * Version:             1.4
  * Requires at least:   5.2
  * Requires PHP:        5.6
  * License:             GPL2
@@ -83,8 +83,12 @@ class SMNTCS_Show_Symlinked_Plugins {
 							// Removes the delete button when plugin is not active.
 							row.find('.delete').remove();
 
-							// Removes the " | " separator behind the "Activate" link when plugin is active.
-							row.find('.activate').html(function(_, html){ return html.replace(' | ', ''); });
+							// Conditionally removes the " | " separator behind the "Activate" link if there are no other links after it.
+							row.find('.activate').each(function() {
+								if ($(this).next().length === 0 || $(this).next().is('.deactivate')) {
+									$(this).html(function(_, html) { return html.replace(' | ', ''); });
+								}
+							});
 
 							// Removes the "Enable auto-updates" link.
 							row.find( '.toggle-auto-update' ).remove();
