@@ -52,6 +52,10 @@ You can find the plugin on https://wordpress.org/plugins/smntcs-show-symlinked-p
 
 ## Changelog
 
+### 1.5 (2026.08.14)
+
+-   Test up to WP 7.0
+
 ### 1.4 (2025.03.20)
 
 -   Test up to WP 6.8
