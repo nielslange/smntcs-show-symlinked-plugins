@@ -1,48 +1,47 @@
 === SMNTCS Show Symlinked Plugins ===
 
-Contributors: 		nielslange
-Tags: 				Plugins
-Stable tag: 		1.5
-Tested up to: 		7.0
-Requires at least: 	5.2
-Requires PHP: 		7.4
-License: 			GPL v2 or later
-License URI: 		https://www.gnu.org/licenses/gpl-2.0.html
+Contributors:       nielslange
+Tags:               plugins, symlink, development, admin, updates
+Requires at least:  5.2
+Tested up to:       7.1
+Requires PHP:       5.6
+Stable tag:         1.6
+License:            GPL v2 or later
+License URI:        https://www.gnu.org/licenses/gpl-2.0.html
 
-Prevent accidentally deleting or updating symlinked plugins.
+Labels symlinked plugins on the Plugins page and hides their delete link and update notice, so you cannot change them by accident.
 
-## Description
+== Description ==
 
-**SMNTCS Show Symlinked Plugins** is a powerful WordPress plugin designed to prevent the accidental deletion or updating of symlinked plugins. It is an essential tool for developers who use symbolic links (symlinks) for plugin development or deployment.
+Developers often symlink plugins from a shared folder into several WordPress sites. Updating or deleting such a plugin from one site changes it for all of them.
 
-When working with WordPress, it is quite common to symlink plugins for various reasons. For example, you might want to test changes without affecting the original plugin, or symlink plugins across multiple sites for easy updates. However, WordPress, by default, does not distinguish between regular and symlinked plugins on the admin plugins page. This can lead to unintended deletions or updates.
-
-**SMNTCS Show Symlinked Plugins** addresses this by adding visible indicators to symlinked plugins and adjusting their options.
-
-## Features
-
-### Indicate Symlinked Plugins
-
-The plugin adds a 'Symlinked' text indicator in front of the action row of each symlinked plugin on the WordPress plugins page. This makes it visually clear which plugins are symlinked, helping you to avoid mistakes.
-
-### Adjust Plugin Actions
-
-For symlinked plugins, the plugin removes the delete button when the plugin is inactive, ensuring that you cannot accidentally delete symlinked plugins. Furthermore, it removes the option to enable auto-updates for symlinked plugins to prevent unintentional updates.
-
-### Custom Styling
-
-The plugin comes with an admin CSS file that you can customize to adjust how symlinked plugins are displayed.
+SMNTCS Show Symlinked Plugins labels symlinked plugins on the Plugins page and hides their delete link and update notice, so they cannot be removed or updated by accident.
 
 == Installation ==
 
 1. Upload `smntcs-show-symlinked-plugins` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
 
+== Frequently Asked Questions ==
+
+= A symlinked plugin folder is suddenly empty. Why? =
+
+The plugin only hides the update and delete links. It cannot stop other tools from changing the folder, for example automatic updates run by your host or by another site that shares the same plugin folder. Check the automatic update settings of every site that uses the shared folder.
+
+= A symlinked plugin folder is suddenly empty. Why? =
+
+The plugin only hides the update and delete links. It cannot stop other tools from changing the folder, for example automatic updates run by your host or by another site that shares the same plugin folder. Check the automatic update settings of every site that uses the shared folder.
+
 == Contribute ==
 
-Contributions are more than welcome. Simply head over to [Github](https://github.com/nielslange/smntcs-show-symlinked-plugins) and open an issue or a pull request.
+Contributions are more than welcome. Simply head over to [GitHub](https://github.com/nielslange/smntcs-show-symlinked-plugins) and open an issue or a pull request.
 
 == Changelog ==
+
+= 1.6 (2026.09.26) =
+
+- Test up to WordPress 7.1
+- Update development dependencies and GitHub Actions
 
 = 1.5 (2026.08.14) =
 
