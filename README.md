@@ -52,6 +52,11 @@ You can find the plugin on https://wordpress.org/plugins/smntcs-show-symlinked-p
 
 ## Changelog
 
+### 1.7 (2026.09.27)
+
+- Clarify the licence as GPL v2 or later
+- Remove duplicated FAQ entries from the readme
+
 ### 1.6 (2026.09.26)
 
 - Test up to WordPress 7.1
