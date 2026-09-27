@@ -5,7 +5,7 @@ Tags:               plugins, symlink, development, admin, updates
 Requires at least:  5.2
 Tested up to:       7.1
 Requires PHP:       5.6
-Stable tag:         1.6
+Stable tag:         1.7
 License:            GPL v2 or later
 License URI:        https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,15 +28,16 @@ SMNTCS Show Symlinked Plugins labels symlinked plugins on the Plugins page and h
 
 The plugin only hides the update and delete links. It cannot stop other tools from changing the folder, for example automatic updates run by your host or by another site that shares the same plugin folder. Check the automatic update settings of every site that uses the shared folder.
 
-= A symlinked plugin folder is suddenly empty. Why? =
-
-The plugin only hides the update and delete links. It cannot stop other tools from changing the folder, for example automatic updates run by your host or by another site that shares the same plugin folder. Check the automatic update settings of every site that uses the shared folder.
-
 == Contribute ==
 
 Contributions are more than welcome. Simply head over to [GitHub](https://github.com/nielslange/smntcs-show-symlinked-plugins) and open an issue or a pull request.
 
 == Changelog ==
+
+= 1.7 (2026.09.27) =
+
+- Clarify the licence as GPL v2 or later
+- Remove duplicated FAQ entries from the readme
 
 = 1.6 (2026.09.26) =
 

@@ -6,10 +6,10 @@
  * Author:              Niels Lange
  * Author URI:          http://nielslange.de
  * Text Domain:         smntcs-show-symlinked-plugins
- * Version:             1.6
+ * Version:             1.7
  * Requires at least:   5.2
  * Requires PHP:        5.6
- * License:             GPL2
+ * License:             GPL v2 or later
  * License URI:         https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package smntcs-show-symlinked-plugins
